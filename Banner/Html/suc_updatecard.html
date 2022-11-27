@@ -1,0 +1,55 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/urlparse_module.js"></script>
+
+<script>
+loadJS();
+window.onload=function(){
+    localizePage();
+    setSize();
+};
+
+function setSize(){
+    var height = sb_util.getWindowHeight();
+    document.body.style.height = height + "px";
+    $("#update_card_suc_pic").height(height*0.57);
+};
+
+function loadJS(){
+    var locale = sb_util.getParameterValue("locale", 'en-us');
+    // var locale = urlParseModule.getURLParameter("locale") ? urlParseModule.getURLParameter("locale") : 'en-us';
+    locale = sb_util.getLocaleFolder(locale);
+    sb_util.loadjscssfile("../lang/" + locale + "/lan_suc_update.js", "js", localizePage);
+};
+
+
+function localizePage(){
+    $("#factive_1").text(lan_suc_activate["factive_1"]);
+    $("#factive_2").text(lan_suc_activate["factive_2"]);
+    $("#mas_trial_link").text(lan_suc_activate["suc_link"]);
+};
+
+</script>
+<title>Update Card</title>
+</head>
+<body onselectstart="return false" oncontextmenu="return false">
+    <div id="update_card_suc_pic" class="suc_pic" style="background-image:url(../image/banner_update_suc.png);background-size: 200px;background-position: 50% 50%;">
+    </div>
+    <div id="suc_content">
+    <h4 id="factive_1">Update Successful</h4>
+    <h5 id="factive_2">Your payment information has been updated successfully. We will process the renewal charge to continue your Pro subscription.</h5>
+    </div>
+    <div id="link_wrap">
+        <a id="mas_trial_link" class="blue_btn" href="sketchbook://banner/close">OK</a>
+    </div>
+</body>
+</html>

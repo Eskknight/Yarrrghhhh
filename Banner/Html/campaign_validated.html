@@ -1,0 +1,127 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/urlparse_module.js"></script>
+<script type="text/javascript" src="../js/contact_us_module.js"></script>
+</html>
+<script>
+
+var CAMPAIGN_VALIDATED_STATUS_SUCCESS = 0;
+var CAMPAIGN_VALIDATED_STATUS_PARAMS_MISSING = 1;
+var CAMPAIGN_VALIDATED_STATUS_INVALIDE = 2;
+var CAMPAIGN_VALIDATED_STATUS_MAX_TIMES = 3;
+var CAMPAIGN_VALIDATED_STATUS_CONSUMED = 4;
+var CAMPAIGN_VALIDATED_STATUS_UNKNOWN = 5;
+
+loadJS();
+window.onload=function(){ 
+    localizePage();
+    updateUIByStatus();    
+};
+
+function updateUIByStatus(){
+    var status = sb_util.getParameterValue("campaign_validated_status", CAMPAIGN_VALIDATED_STATUS_UNKNOWN.toString());
+    status = parseInt(status);
+
+    switch(status){
+        case CAMPAIGN_VALIDATED_STATUS_SUCCESS:
+        var timeleft = sb_util.getParameterValue("campaign_time_left", "0");
+        timeleft = parseInt(timeleft);
+        var campaignDaysLeft = Math.ceil(timeleft / 86400.0);
+        if (campaignDaysLeft > 1) {
+            $("#campaign_days").html(campaignDaysLeft.toString());
+            $("#campaign_validated_success_txt").removeClass("mhide");
+        }else{
+            $("#campaign_day").html(campaignDaysLeft.toString());
+            $("#campaign_validated_success_singular_txt").removeClass("mhide");
+        }
+        
+        $("#campaign_validated_success_header").removeClass("mhide");
+        
+        break;
+        case CAMPAIGN_VALIDATED_STATUS_PARAMS_MISSING:
+        $("#campaign_validated_failed_error_header").removeClass("mhide");
+        $("#campaign_validated_client_error_txt").removeClass("mhide");
+        break;
+        case CAMPAIGN_VALIDATED_STATUS_INVALIDE:
+        $("#campaign_validated_failed_header").removeClass("mhide");
+        $("#campaign_validated_invalid_txt").removeClass("mhide");
+        break;
+        case CAMPAIGN_VALIDATED_STATUS_MAX_TIMES:
+        $("#campaign_validated_failed_involved_header").removeClass("mhide");
+        $("#campaign_validated_maxtimes_txt").removeClass("mhide");
+        break;
+        case CAMPAIGN_VALIDATED_STATUS_CONSUMED:
+        $("#campaign_validated_failed_header").removeClass("mhide");
+        $("#campaign_validated_consumed_txt").removeClass("mhide");
+        break;
+        case CAMPAIGN_VALIDATED_STATUS_UNKNOWN:
+        $("#campaign_validated_failed_error_header").removeClass("mhide");
+        $("#campaign_validated_unknown_txt").removeClass("mhide");
+        break;
+    }
+}
+
+function setSize(){
+    var height = sb_util.getWindowHeight();
+    document.body.style.height = height + "px";
+    $("#fail_pic").height(height*0.57);
+};
+
+function loadJS(){
+    var locale = sb_util.getParameterValue("locale", 'en-us');
+    // var locale = urlParseModule.getURLParameter("locale") ? urlParseModule.getURLParameter("locale") : 'en-us';
+    // locale = locale.toLowerCase();
+    locale = sb_util.getLocaleFolder(locale);
+    sb_util.loadjscssfile("../lang/" + locale + "/lan_campaign_validated.js", "js", localizePage);
+};
+
+function localizePage(){
+    $("#campaign_validated_success_header").html(lan_campaign_validated["campaign_validated_success_header"]);
+    $("#campaign_validated_failed_header").html(lan_campaign_validated["campaign_validated_failed_header"]);
+    $("#campaign_validated_failed_involved_header").html(lan_campaign_validated["campaign_validated_failed_involved_header"]);
+    $("#campaign_validated_failed_error_header").html(lan_campaign_validated["campaign_validated_failed_error_header"]);
+    // $("#campaign_validated_success_txt").html(lan_campaign_validated["campaign_validated_success_txt"]);
+    $("#campaign_validated_success_txt_1").html(lan_campaign_validated["campaign_validated_success_txt_1"]);
+    $("#campaign_validated_success_txt_2").html(lan_campaign_validated["campaign_validated_success_txt_2"]);
+    // $("#campaign_validated_success_singular_txt").html(lan_campaign_validated["campaign_validated_success_singular_txt"]);
+    $("#campaign_validated_success_singular_txt_1").html(lan_campaign_validated["campaign_validated_success_singular_txt_1"]);
+    $("#campaign_validated_success_singular_txt_2").html(lan_campaign_validated["campaign_validated_success_singular_txt_2"]);
+    $("#campaign_validated_invalid_txt").html(lan_campaign_validated["campaign_validated_invalid_txt"]);
+    $("#campaign_validated_consumed_txt").html(lan_campaign_validated["campaign_validated_consumed_txt"]);
+    $("#campaign_validated_maxtimes_txt").html(lan_campaign_validated["campaign_validated_maxtimes_txt"]);
+    $("#campaign_validated_client_error_txt").html(lan_campaign_validated["campaign_validated_client_error_txt"]);
+    $("#campaign_validated_unknown_txt").html(lan_campaign_validated["campaign_validated_unknown_txt"]);
+    $("#ok_btn").html(lan_campaign_validated["ok_btn"]);
+};
+</script>
+<title>Campaign Validated</title>
+</head>
+<body onselectstart="return false" oncontextmenu="return false">
+	<div id="campaign_validated" >
+        <div id="campaign_validated_content">
+            <h1 id="campaign_validated_success_header" class="font_lighter mhide campaign_validated_header">Congratulations!</h1>
+            <h1 id="campaign_validated_failed_header" class="font_lighter mhide campaign_validated_header">Activation failed</h1>
+            <h1 id="campaign_validated_failed_involved_header" class="font_lighter mhide campaign_validated_header">Already involved</h1>
+            <h1 id="campaign_validated_failed_error_header" class="font_lighter mhide campaign_validated_header">Error has occurred </h1>
+            
+            
+            <p id="campaign_validated_success_txt" class="font_lighter mhide campaign_validated_detail"><span id="campaign_validated_success_txt_1">Enjoy your Pro membership for</span> <span id="campaign_days">30</span> <span id="campaign_validated_success_txt_2">days.</span></p>
+            <p id="campaign_validated_success_singular_txt" class="font_lighter mhide campaign_validated_detail"><span id="campaign_validated_success_singular_txt_1">Enjoy your Pro membership for</span> <span id="campaign_day">0</span> <span id="campaign_validated_success_singular_txt_2">day.</span></p>
+            <p id="campaign_validated_invalid_txt" class="font_lighter mhide campaign_validated_detail">The free membership offering is invalid or has expired.</p>
+            <p id="campaign_validated_consumed_txt" class="font_lighter mhide campaign_validated_detail">Your Pro membership has already been activated. </p>
+            <p id="campaign_validated_maxtimes_txt" class="font_lighter mhide campaign_validated_detail">The limit of Pro membership activation for this campaign is reached. </p>
+            <p id="campaign_validated_client_error_txt" class="font_lighter mhide campaign_validated_detail">Please try again </p>
+            <p id="campaign_validated_unknown_txt" class="font_lighter mhide campaign_validated_detail">Please try again </p>
+            <a id="ok_btn" href="sketchbook://banner/close">OK</a>
+        </div>
+    </div>
+</body>

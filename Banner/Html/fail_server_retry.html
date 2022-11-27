@@ -1,0 +1,102 @@
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+
+<head>
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+
+<script type="text/javascript" src="../js/util.js"></script>
+
+<script type="text/javascript" src="../js/urlparse_module.js"></script>
+
+<script>
+
+loadJS();
+
+window.onload=function(){ 
+
+    localizePage();
+
+    setSize();
+
+};
+
+window.onresize=function(){
+    setSize();
+}
+
+
+
+function setSize(){
+
+    var w = sb_util.getWindowWidth();
+    var h = sb_util.getWindowHeight();
+    document.body.style.width = w + "px";
+    document.body.style.height = h + "px";
+
+};
+
+
+
+function loadJS(){
+
+    var locale = sb_util.getParameterValue("locale", 'en-us');
+
+    locale = sb_util.getLocaleFolder(locale);
+
+    sb_util.loadjscssfile("../lang/" + locale + "/lan_fail_server.js", "js", localizePage);
+
+};
+
+
+
+function localizePage(){
+
+    $("#fserver_1").text(lan_fail_server["fserver_1"]);
+
+    $("#fserver_2_break").html(lan_fail_server["fserver_2"]);
+
+    $("#fserver_3_link").html(lan_fail_server["fserver_3_link"]);
+
+    $("#fserver_3_link a:first").attr("href", "sketchbook://retry");
+
+};
+
+</script>
+
+<title>Server Fail</title>
+
+</head>
+
+<body onselectstart="return false" oncontextmenu="return false">
+
+	<div id="server_error_pic">
+
+	</div>
+
+	<div id="no_internet_content_retry">
+
+	<h4 id="fserver_1">Something is wrong with our server</h4>
+
+	<h5 id="fserver_2_break">We’ve been working on this…<br>We really appreciate your patience.</h5>
+    <br>
+    <h5 id="fserver_3_link">Please <a>try again</a> later.</h5>
+
+	</div>
+
+</body>
+
+</html>

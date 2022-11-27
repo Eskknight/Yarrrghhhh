@@ -1,0 +1,132 @@
+/*------------------------------------buynow page--------------------------------------------*/
+#buyframe{
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
+#buybody {
+	height:525px;
+}
+
+#s_content_short {
+	height: 525px;
+	width: 100%;
+}
+
+#coupon_entry {
+	margin-top: 25px;
+}
+
+#coupon_entry .coupon_container{
+	margin: 0 auto;
+	margin-left: 27px;
+
+}
+
+#coupon_entry #show_coupon_js{
+	min-width: 185px;
+	min-height: 30px;
+	font-weight: 300;
+	color: #188dfb;
+	cursor: pointer;
+}
+
+#coupon_entry #enter_coupon {
+	display: none;
+	position: relative;
+	width: 250px;
+	border: 1px solid #bfbfbf;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+}
+
+form.formatted button {
+	display: inline-block;
+	position: absolute;
+	top: -1px;
+	/*right: -1px;*/
+	bottom: -1px;
+	width: 38%;
+	/*min-height: 42px;*/
+	padding: 0px 20px;
+	font-size: 14px;
+	/*line-height: 40px;*/
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	box-shadow: none;
+	background-color: #fafafa;
+	border: 1px solid #bfbfbf;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+	color: #656464;
+	font-weight: 400;
+	
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+form.formatted input[type=text] {
+	display: inline-block;
+	width: 62%;
+	/*height: 40px;*/
+	padding: 12px 10px 10px 20px;
+	font-size: 14px;
+	/*line-height: 1.42857;*/
+	color: #7f7f7f;
+	background-color: #ffffff;
+	background-image: none;
+	border: none;
+	border-radius: 4px;
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+	outline: 0;
+	box-shadow: none;
+}
+
+button, input{
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+.icon-price-tag:before {
+	content: "";
+    display: block;
+    background: url("../image/banner_membership_icn_promocode.png") no-repeat;
+    background-position: center; 
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin: 0 15px 0 0;
+    background-size: contain;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+	.icon-price-tag:before {
+		background-image: url("../image/banner_membership_icn_promocode@2x.png");
+	}
+}
+
+.coupon_apply_result{
+	line-height: 42px;
+}
+
+.coupon_apply_result_error{
+	line-height: 42px;
+	color: #aa0000;;
+}
+
+.yhide{
+	overflow-y: hidden; 
+}
+
+iframe {  -webkit-transform:translate3d(0,0,0); }

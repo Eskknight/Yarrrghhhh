@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if IE]>    <html class="use-jquery-animations"> <![endif]-->
+<!--[if !IE]><!--> 
+<html> 
+<!--<![endif]-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,
+width=device-width, height=device-height" />
+
+    <link rel="stylesheet" type="text/css" href="../css/lockoutsplashscreen.css">
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../js/util.js"></script>
+
+    <script type="text/javascript" src="../js/urlparse_module.js"></script>
+
+    <script type="text/javascript" src="../js/lockoutsplashscreen.js"></script>
+
+    <title>Lockout Page</title>
+</head>
+
+<body onselectstart="return false" oncontextmenu="return false" ontouchmove="return false">
+    <script>
+        // This script is here so that we don't have elements 
+        // appear to jump around from re-layout caused by logic
+        // in onload
+        if (isLockedOut) {
+            $("body").addClass("locked-out");
+        }
+    </script>
+
+    <div class="background-layout">
+        <img src="../image/lockout/lockout-background-image-1.jpg" class="background-hero-image">
+        <div class="background-layout-autodesk-icon">
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="main-content" class="content-column ">
+            <div class="section announcement-section">
+                <div class="section-row header">
+                    <div id="announcement_header" class="row-content large-font">
+                        TEST SKETCHBOOK is now
+                    </div>
+                </div>
+                <div class="section-row middle">
+                    <div class="row-content">
+                        <div id="announcement_middle" class="xl-font">
+                            TEST free
+                        </div>
+                        <div id="no_really" class="large-font">
+                            TEST no really
+                        </div>
+                    </div>
+                </div>
+                <div class="section-row footer">
+                    <div id="announcement_footer" class="row-content small-font">
+                        TEST All you need is an Autodesk account
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-buttons-section">
+                <a id="create_account_button" class="create_account_link modern_button" href="/">
+                    TEST Create Account
+                </a>
+                <a id="login_button" class="sign_in_link modern_button" href="/">
+                    TEST Sign In
+                </a>
+            </div>
+        </div>
+
+        <div id="trial-content" class="mhide">
+            <div class="pencil-icon">
+            </div>
+
+            <div class="trial-text-section content-column">
+                <div class="start-now-button">
+                    <div class="start-now-button-text">
+                        <div class="start-now-header small-font">
+                            <p id="days_remaining_plural_txt" class="font_lighter mhide">
+                                <span id="days_remaining_plural_txt_1">TEST Or use it without an account for</span>
+                                <span class="remaining_days">7</span>
+                                <span id="days_remaining_plural_txt_2">more days</span>
+                            </p>
+                            <p id="days_remaining_singular_txt" class="font_lighter mhide">
+                                TEST Or use it without an account for 1 days.
+                            </p>
+                        </div>
+
+                        <a id="start_now_link" href="">
+                            TEST Start drawing
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="start-trial-text-section content-column mhide">
+                <div class="section enjoy-your-trial">
+                    <div class="section-row header large-font">
+                        <div class="row-content">
+                            <span id="enjoy_trial_header_plural_txt" class="mhide">
+                                <span id="enjoy_trial_header_plural_txt_1">TEST Enjoy
+                                    <strong>SketchBook</strong> for</span>
+                                <span class="remaining_days">7</span>
+                                <span id="enjoy_trial_header_plural_txt_2">TEST more days without an account</span>
+                            </span>
+                            <span id="enjoy_trial_header_singular_txt" class="mhide">
+                                TEST Enjoy
+                                <strong>SketchBook</strong> for 1 more day without an account
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="section-row middle">
+                        <div class="row-content">
+							<div class="calendar-day">
+                                <div id="calendar_icon_header">
+                                    TEST days left
+                                </div>
+                                <div class="number remaining_days">
+                                    TEST 7
+                                </div>
+							</div>
+                        </div>
+                    </div>
+
+                    <div class="section-row footer">
+                        <div class="row-content">
+                            <div id="enjoy_trial_footer_label" class="small-font">
+                                TEST Or simply create a
+                            </div>
+                            <a id="enjoy_trial_footer_link" class="create_account_link">TEST Free Account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

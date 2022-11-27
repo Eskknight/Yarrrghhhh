@@ -1,0 +1,32 @@
+
+@font-face {
+    font-family: 'Artifakt Legend Web';
+    src: url('ArtifaktLegend-Bold.woff') format('woff'),
+        url('ArtifaktLegend-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Artifakt Legend Web';
+    src: url('ArtifaktLegend-Light.woff') format('woff'),
+        url('ArtifaktLegend-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Artifakt Legend Web';
+    src: url('ArtifaktLegend-Heavy.woff') format('woff'),
+        url('ArtifaktLegend-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Artifakt Legend Web';
+    src: url('ArtifaktLegend-Regular.woff') format('woff'),
+        url('ArtifaktLegend-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

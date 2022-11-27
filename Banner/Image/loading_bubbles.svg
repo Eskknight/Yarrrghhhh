@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-495 369 32 32" enable-background="new -495 369 32 32" xml:space="preserve">
+<circle fill="#188DFB" cx="-487" cy="385" r="0">
+<animate  fill="remove" restart="always" attributeName="r" additive="replace" calcMode="spline" values="0; 3.5; 0; 0" dur="1.2s" repeatCount="indefinite" accumulate="none" begin="0" keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8">
+	</animate>
+</circle>
+<circle fill="#188DFB" cx="-479" cy="385" r="0">
+<animate  fill="remove" restart="always" attributeName="r" additive="replace" calcMode="spline" values="0; 3.5; 0; 0" dur="1.2s" repeatCount="indefinite" accumulate="none" begin="0.2" keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8">
+	</animate>
+</circle>
+<circle fill="#188DFB" cx="-471" cy="385" r="0">
+<animate  fill="remove" restart="always" attributeName="r" additive="replace" calcMode="spline" values="0; 3.5; 0; 0" dur="1.2s" repeatCount="indefinite" accumulate="none" begin="0.4" keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8">
+	</animate>
+</circle>
+</svg>

@@ -1,0 +1,74 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/urlparse_module.js"></script>
+
+<script>
+
+var MP_PLAN_14_PRICE = sb_util.getParameterValue("mp_plan_14", "$4.99");
+var MP_PLAN_15_PRICE = sb_util.getParameterValue("mp_plan_15", "$29.99");
+
+loadJS();
+window.onload=function(){
+    localizePage();
+
+    updatePrices();
+};
+
+function updatePrices() {
+    $("#price_year").html(MP_PLAN_15_PRICE);
+
+    var trial_info = $("#mas_trial_2").text();
+    trial_info = trial_info.replace("%@", MP_PLAN_14_PRICE);
+    $("#mas_trial_2").text(trial_info);
+}
+
+function loadJS(){
+    var locale = sb_util.getParameterValue("locale", 'en-us');
+    locale = sb_util.getLocaleFolder(locale);
+    sb_util.loadjscssfile("../lang/" + locale + "/lan_mas_trial.js", "js", "");
+    sb_util.loadjscssfile("../lang/" + locale + "/lan_subscription.js", "js", "");
+};
+
+
+function localizePage(){
+    $("#mas_trial_1").text(lan_mas_trial["mas_trial_1"]);
+    $("#mas_trial_2").text(lan_mas_trial["mas_trial_2"]);
+    $("#mas_trial_link").text(lan_mas_trial["mas_trial_link"]);
+    $("#mas_trial_more_info").html(lan_mas_trial["mas_trial_more_info"]);
+    $("#mas_trial_buynow").html(lan_mas_trial["mas_trial_buynow"]);
+    $("#price_year_txt").html(lan_subscription["price_year_txt"]);
+};
+
+</script>
+
+<title>Activate Free Trial</title>
+</head>
+<body onselectstart="return false" oncontextmenu="return false">
+    <div><a id="backarrow" href="sketchbook://banner/page_back?backpage=home"></a></div>
+    <div id="mas_trial_pic"></div>
+    <div id="mas_trial_content">
+        <h4 id="mas_trial_1">TEST Activate 7 Day Free Trial</h4>
+        <h5 id="mas_trial_2">TEST You’ll be charged $4.99 a month, once your 7 day trial has ended, or you can turn off Automatic Renewal in Subscription Management.</h5>
+        <h5><a id="mas_trial_more_info" class="gopro_btn" href="sketchbook://banner/about_subscription">TEST More Info</a></h5>
+    </div>
+    <div id="link_wrap2">
+        <a id="mas_trial_link" class="blue_btn" href="sketchbook://banner/buy?mp_plan_id=14&isIE8=0&source=mas-trial">TEST Continue</a>
+    </div>
+    <div id="mas_trial_buy">
+        <span id="mas_trial_buynow">TEST Or Buy Now?</span>&nbsp;
+        <a id="mas_trial_buy_link" class="gopro_btn" href="sketchbook://banner/buy?mp_plan_id=15&isIE8=0&source=buy-year-button">
+            <span id="price_year">TEST $0.0</span>
+            <span id="price_year_txt">TEST / year</span>
+        </a>
+    <div>
+</body>
+</html>

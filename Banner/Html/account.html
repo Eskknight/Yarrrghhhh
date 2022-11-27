@@ -1,0 +1,323 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+<script type="text/javascript">
+function OnImageLoad(evt)
+{
+    $("#loadingImg").height($("#div_loading_account_price").height());
+    $("#loadingImg").css('visibility', 'visible');
+};
+</script>
+
+<title>Account</title>
+</head>
+<body class="mhidden" onselectstart="return false" oncontextmenu="return false">
+	<div id="s_tag">
+		<a id="backarrow" href="sketchbook://banner/page_back?backpage=home">
+		</a>
+		<div id="account-menu"> 
+			<a class="tag account-menu-item" id="tag_1" href="sketchbook://banner/event?type=changed&id=banner-page&page=profile&source=page-tab"><h2 id="tag_1_txt">TEST My Profile</h2></a> 
+			<a class="tag account-menu-item mhide" id="tag_2" href="sketchbook://banner/event?type=changed&id=banner-page&page=assets&source=page-tab"><h2 id="tag_2_txt">TEST My Creative Assests</h2></a> 
+			<a class="tag account-menu-item" id="tag_3" href="sketchbook://banner/event?type=changed&id=banner-page&page=plan&source=page-tab"><h2 id="tag_3_txt">TEST My Plan</h2></a>
+		    <div class="tag_line"></div>
+		</div>
+		 <a id="account-login-out" class="account-menu-item mhide" href="sketchbook://banner/signout?source=signout-button">TEST Log Out</a>
+	</div>
+	<div id="account-content-wrap">
+		<div class="account-content" id="account-content-1">
+			<div id="account_sec0">
+				<p id="account_greeting"><span id="greeting_txt">TEST Hello, </span><span id="username">Joyce</span>!</p>
+			</div>
+			<hr>
+			<div id="account_sec1">
+				<div id="account_sec1_left">
+					<p class="account_title" id="account_title_email">TEST Email</p>
+					<p class="account_content" id="account_email">joyce@sketchbook.com</p>
+				</div>
+				<div id="account_sec1_right">
+					<p><a id="edit_btn" href="sketchbook://banner/manage-account-online">TEST Manage Account Online</a></p>
+				</div>
+			</div>
+			<hr>
+			<div id="account_sec2">
+				<div>
+					<p class="account_title" id="account_title_membership">TEST Membership</p>
+					<p class="account_content" id="account_membership">TEST SketchBook Pro Membership (Trial)</p>
+				</div>
+				<div id="account_sec2_validatedate" class="mhide">
+					<p class="account_title" id="account_title_validatedate">TEST Valid Date</p>
+					<p class="account_content" id="account_validatedate">TEST August 6th, 2015</p>
+				</div>
+			</div>
+		</div>
+		<div class="account-content mhide" id="account-content-2">TEST content 2</div>
+		<div class="account-content" id="account-content-3">
+			<div id="account_s_content">
+		        <div id="account-left-div">
+		    		<div id="account-price-free">
+		        		<!--<div class="account-price-sign">$</div>-->
+		        		<!--<div class="price-before">0</div>-->
+		        		<!--<div class="account-price-sign" style="visibility: hidden;">$</div>-->
+			        	<div id="price-title-free" class="price-title">TEST Free</div>
+						<div style="clear:both; font-size:1px;"></div>
+		        	</div>
+					<div class="account-plan">
+						<p id="left_account_plan" class="txt-center">TEST Current Plan</p>
+					</div>
+		    		<div class="account-intro"><p id="account_intro_free_id">TEST FREE: Capture the natural feel of drawing with these easy-to-use tools. </p></div>
+		    		<div class="account-feature-list">
+			    		<ul id="free-feature-list">
+			    			<li id="free_feature_list_1">TEST Optimized pen-based workflow</li>
+			    			<li id="free_feature_list_2">TEST 16 brushes </li>
+			    			<li id="free_feature_list_3">TEST 3 layers</li>
+			    			<li id="free_feature_list_4">TEST Rulers and ellipses</li>
+			    			<li id="free_feature_list_5">TEST Quick Transform</li>
+			    		</ul>
+			    	</div>
+		        </div>
+		        <div id="account-verticle-line"> </div>
+		        <div id="account-right-div">
+		        	<!--<div id="account_price_loading">-->
+		        		<!--<div id="div_loading_account_price">-->
+		        			<!--<img id="loadingImg" class="svg_gif" style="visibility:hidden" onload="OnImageLoad(event);">-->
+		        		<!--</div>-->
+		        	<!--</div>-->
+		        	<div id="account-price-pro">
+		        		<!--<div class="account-price-sign">$</div>-->
+		        		<!--<div id="price_before_right" class="price-before">2</div>-->
+		        		<!--<div class="price-after">-->
+			        		<!--<div id="price_after_num_right" class="price-after-num">.99</div>-->
+			        		<!--<div id="price_after_txt_right" class="price-after-txt">TEST /Mo</div>-->
+			        	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+			        	<!--<div class="account-price-sign" style="visibility:hidden">$</div>-->
+			        	<!--<div id="gifticon" class="mhide">Gift</div>-->
+						<div id="price-title-pro" class="price-title">TEST Pro</div>
+						<div style="clear:both; font-size:1px;"></div>
+		        	</div>
+					<div class="account-plan">
+						<div id="account_action_pro" class="mhide txt-center">
+							<p id="right_current_plan">Current Plan.</p>
+							<p id="expire_txt">- <span id="account_expire_txt">TEST Until</span> <span id="expire_date">TEST 2016/4/10</span> -</p>
+						</div>
+
+						<div id="account_trial_days_countdown" class="mhide txt-center">
+							<div id="account_countdown_days">15 </div>
+							<div id="account_countdown_txt">
+								<span id="account_countdown_txt_1" class="mhide">TEST Days left for trial</span>
+								<span id="account_countdown_txt_2" class="mhide">TEST Day left for trial</span>
+							</div>
+							<div style="clear:both; font-size:1px;"></div>
+						</div>
+					</div>
+		    		<div class="account-intro"><p id="account_intro_pro_id">TEST PRO: Expand your creative toolset with SketchBook Pro membership.</p></div>
+		    		<div class="account-feature-list">
+			    		<ul id="pro-feature-list">
+			    			<li id="pro_feature_list_1">TEST 100+ customizable brushes</li>
+			    			<li id="pro_feature_list_2">TEST Advanced layer functionality</li>
+			    			<li id="pro_feature_list_3">TEST Full set of Copic colors</li>
+			    			<li id="pro_feature_list_4">TEST Flipbook animation</li>
+			    			<li id="pro_feature_list_5">TEST Advanced perspective guides</li>
+			    			<li id="pro_feature_list_6">TEST Persistent selection tools</li>
+			    			<li id="pro_feature_list_7">TEST Distort transform</li>
+			    			<li id="pro_feature_list_8">TEST Dynamic Gradient Fill</li>
+			    			<li id="pro_feature_list_9">TEST Unlock mobile and desktop</li>
+			    			<li id="pro_feature_list_10">TEST Unlimited upgrade</li>
+			    		</ul>
+			    	</div>
+			    	<div class="account-actions">
+						<a id="account-activate-trial-btn" class="mhide" href="sketchbook://banner/activate_trial">
+							<p id="account_activate_trial_btn_txt" class="mhide" ><span id="account_activate_trial_btn_txt_0"></span> <span id="account_activate_trial_btn_txt_1">TEST 15</span> <span id="account_activate_trial_btn_txt_2">Days Trial</span></p>
+							<img id="activating_gif" class="svg_gif mhide">
+						</a>
+
+				    	<!--<div id="account-price-cell" class="mhide">-->
+				    		<!---->
+					        <!--<div id="account-price-cell-btn" >-->
+					        	<!--<a class="mhide" id="account_price_cell_txt" >TEST Buy</a>-->
+					        	<!--<img id="no_connection_gif" class="svg_gif">-->
+
+					          <!--&lt;!&ndash; <div id="money"> <a id="moneysent" class="year_clicked" onclick="checkBuy()"></a> <img id="no_connection_gif" class="svg_gif"> </div>-->
+					          <!--<div id="grayline"> </div>-->
+					          <!--<div id="arrow" class="arrow_active"> <img id="arrowpic" src="../image/arrow.png"> </div> &ndash;&gt;-->
+					        <!--</div>-->
+					        <!--<div id="choice">-->
+					          <!--<div style="height:11px"></div>-->
+					          <!--<div class="dropdown" id="mo"><a class="dropdown_a" id="mo_a" href="sketchbook://banner/buy?mp_plan_id=14&isIE8=0&source=buy-month-button">$</a></div>-->
+					          <!--<div class="dropdown" id="yr"><a class="dropdown_a" id="yr_a" href="sketchbook://banner/buy?mp_plan_id=15&isIE8=0&source=buy-year-button">$</a></div>-->
+					          <!--<div style="height:11px"></div>-->
+					        <!--</div>-->
+					    <!--</div>-->
+
+						<div id="account_connection_error" class="mhide">
+							<img id="no_connection_gif" class="svg_gif">
+						</div>
+						<!--new buy button-->
+						<div id="account_new_buy_btn_cell" class="mhide">
+							<div id="new_buy_btn_area">
+								<a id="new_buy_btn" href="sketchbook://banner/buy?mp_plan_id=15&isIE8=0&source=buy-year-button">
+									<div id="price_info">
+										<span class="price_symbol price_info_part1">$</span>
+										<span id="price_year" class="price_info_part2">0.0</span>
+										<span id="price_year_txt" class="price_info_part3"> / yr</span>
+									</div>
+								</a>
+								<a class="buy_btn_down" id="new_buy_btn_down">
+									<div class="btn_split"></div>
+								</a>
+
+								<div class="buy_choice" id="new_buy_choice">
+									<a class="choice_dropdown" href="sketchbook://banner/buy?mp_plan_id=15&isIE8=0&source=buy-year-button">
+										<div class="choice_dropdown_price">
+											<span class="price_symbol choice_dropdown_price_part1">$</span>
+											<span id="choice_price_year" class="choice_dropdown_price_part2">0.0</span>
+											<span id="choice_price_year_txt" class="choice_dropdown_price_part3"> / yr</span>
+										</div>
+									</a>
+									<div class="price_list_split"></div>
+									<a class="choice_dropdown" href="sketchbook://banner/buy?mp_plan_id=14&isIE8=0&source=buy-month-button">
+										<div class="choice_dropdown_price">
+											<span class="price_symbol choice_dropdown_price_part1">$</span>
+											<span id="choice_price_month" class="choice_dropdown_price_part2">0.0</span>
+											<span id="choice_price_month_txt" class="choice_dropdown_price_part3"> / mon</span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!--end new buy botton-->
+
+
+						<!--promotion buy button-->
+						<div id="account_promotion_btn_cell" class="mhide">
+							<div id="promotion_btn_area">
+								<a id="promotion_buy_btn" href="sketchbook://banner/buy?mp_plan_id=15&isIE8=0&source=buy-year-button">
+									<div id="promotion_info" class="info_outer">
+										<div class="info_middle">
+											<div class="info_inner">
+												<div id="promotion_info_title">TEST SALE</div>
+												<div id="promotion_info_detail">0% off</div>
+											</div>
+										</div>
+									</div>
+									<div id="promotion_price_info">
+										<span class="price_symbol price_info_part1">$</span>
+										<span id="promotion_price" class="price_info_part2">0.0</span>
+										<span id="promotion_price_year_txt" class="price_info_part3"> / yr</span>
+									</div>
+								</a>
+								<a class="buy_btn_down" id="promotion_buy_btn_down">
+									<div class="btn_split"></div>
+								</a>
+
+								<div class="buy_choice" id="promotion_buy_choice">
+									<a class="choice_dropdown" href="sketchbook://banner/buy?mp_plan_id=15&isIE8=0&source=buy-year-button">
+										<div class="promotion_dropdown_leftInfo info_outer">
+											<div class="info_middle">
+												<div class="info_inner">
+													<div id="promotion_dropdown_title" class="promotion_dropdown_title">TEST SALE</div>
+													<div id="promotion_dropdown_dayleft" class="promotion_dropdown_dayleft">0 day left</div>
+												</div>
+											</div>
+										</div>
+										<div class="promotion_dropdown_rightInfo">
+											<div class="choice_dropdown_price">
+												<span class="price_symbol choice_dropdown_price_part1">$</span>
+												<span id="promotion_choice_price_year" class="choice_dropdown_price_part2">0.0</span>
+												<span id="promotion_choice_price_year_txt" class="choice_dropdown_price_part3"> / yr</span>
+											</div>
+											<div class="promotion_dropdown_original_price mhide" id="promotion_dropdown_original_price">
+												<span class="price_symbol promotion_dropdown_original_price_part1">$</span>
+												<span id="promotion_dropdown_original_price_year" class="promotion_dropdown_orignal_price_part2">0.0</span>
+											</div>
+											<div id="promotion_dropdown_extension" class="promotion_dropdown_add_month mhide">+0 month</div>
+										</div>
+									</a>
+									<div class="price_list_split"></div>
+									<a class="choice_dropdown" href="sketchbook://banner/buy?mp_plan_id=14&isIE8=0&source=buy-month-button">
+										<div class="promotion_dropdown_leftInfo"></div>
+										<div class="promotion_dropdown_rightInfo">
+											<div class="choice_dropdown_price">
+												<span class="price_symbol choice_dropdown_price_part1">$</span>
+												<span id="promotion_choice_price_month" class="choice_dropdown_price_part2">0.0</span>
+												<span id="promotion_choice_price_month_txt" class="choice_dropdown_price_part3"> / mon</span>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!--promotion buy button-->
+
+
+	                    <div id="account_activate_oem_btn_cell" class="mhide">
+	                    	<a id="account_activate_oem_btn" href="sketchbook://banner/home?page=oem&source=redeem-oem-membership">
+	                        	<div id="account_activate_oem_txt">TEST Redeem 3-month membership</div>
+	                    	</a>
+	                    </div>
+
+                    	<div id="account_mas_buy_btn_cell" class="mhide">
+                      		<a id="account_mas_buy_btn" href="sketchbook://banner/buy?mp_plan_id=15&isIE8=0&source=buy-year-button">
+                    			<div id="account_mas_buy_btn_txt">TEST Buy</div>
+                  			</a>
+						</div>
+
+						<div id="account_mas_trial_btn_cell" class="mhide">
+                      		<a id="account_mas_trial_btn" href="sketchbook://banner/mas_trial?source=my-plan">
+                            	<div id="account_mas_trial_btn_txt">TEST Free 7 Days</div>
+                        	</a>
+						</div>
+
+			    		<!-- <div id="buy_cell" class="mhide">
+					        <div id="buy_cell_btn" style="display: block;">
+					          <div id="money"> <a id="moneysent" class="year_clicked" onclick="checkBuy()" style="display: none;"></a> <img id="no_connection_gif" class="svg_gif" src="../image/banner_loading@2x.gif" style="display: block;"> </div>
+					          <div id="grayline"> </div>
+					          <div id="arrow" class="arrow_active"> <img id="arrowpic" src="../image/arrow.png"> </div>
+					        </div>
+					        <div class="tick" id="icon_5"> </div>
+					        <div id="choice">
+					          <div style="height:11px"></div>
+					          <div class="dropdown" id="mo"><a class="dropdown_a" id="mo_a" href="sketchbook://banner/buy?mp_plan_id=14&amp;isIE8=0&amp;source=buy-month-button"></a></div>
+					          <div class="dropdown" id="yr"><a class="dropdown_a" id="yr_a" href="sketchbook://banner/buy?mp_plan_id=15&amp;isIE8=0&amp;source=buy-year-button"></a></div>
+					          <div style="height:11px"></div>
+					        </div>
+					      </div> -->
+			        </div>
+		        </div>
+		        <div style="clear:both; font-size:1px;"></div>
+			</div>
+		</div>
+	</div>
+	<div id="trial_activated" class="mhide">
+	    <div id="trial_activated_content">
+			<h1 id="trial_activated_header" class="font_lighter mhide">TEST Trial Activated!</h1>
+			<h1 id="trial_activated_failed_header" class="font_lighter mhide">TEST Trial Not Activated!</h1>
+			<p id="trial_activated_txt" class="font_lighter mhide"><span id="trial_validated_success_txt_1">TEST Now, you can enjoy PRO Membership free for</span> <span id="trial_days">30</span> <span id="trial_validated_success_txt_2">days.</span></p>
+			<p id="trial_not_activated_same_machine_txt" class="font_lighter mhide">TEST This machine has already been tried.</p>
+			<p id="trial_not_activated_expired_txt" class="font_lighter mhide">TEST Your account's trial is expired.</p>
+			<p id="trial_not_activated_try_again_txt" class="font_lighter mhide">TEST Oops… Please try again.</p>
+			<a id="ok_btn">TEST OK</a>
+		</div>
+	</div>
+	<!--<div class="forjs" id="forjs_mo"> / mo</div>-->
+	<!--<div class="forjs" id="forjs_yr"> / yr</div>-->
+</body>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/urlparse_module.js"></script>
+<script type="text/javascript" src="../js/svg_support.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+
+<!-- for counting down-->
+<link rel="stylesheet" type="text/css" href="../css/jquery.countdown.css"> 
+<script type="text/javascript" src="../js/jquery.plugin.min.js"></script> 
+<script type="text/javascript" src="../js/jquery.countdown.js"></script>
+
+<script type="text/javascript" src="../js/account.js"></script>
+</html>

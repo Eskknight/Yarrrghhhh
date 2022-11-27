@@ -1,0 +1,91 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+<head>
+	 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	 <title>SketchBook</title>
+	 <link rel="stylesheet" type="text/css" href="../css/banner.css">
+	 <script type="text/javascript" src="../js/jquery.min.js"></script>
+	 <script type="text/javascript" src="../js/util.js"></script>
+	 <script type="text/javascript" src="../js/image_process_module.js"></script>
+	 <script type="text/javascript" src="../js/urlparse_module.js"></script>
+	 <script type="text/javascript" src="../js/svg_support.js"></script>
+	 <script type="text/javascript">
+        
+        $(document).ready(function(){
+        	setSize();
+        	// $("#hint").html(navigator.userAgent);
+        });
+
+        window.onresize=function(){
+            setSize();
+        }
+
+        function setSize(){
+            var w = sb_util.getWindowWidth();
+            var h = sb_util.getWindowHeight();
+            document.body.style.width = w + "px";
+            document.body.style.height = h + "px";
+        };
+	 
+     	var _url = sb_util.getParameterValue("INTERNAL_URL", "");
+		var _error = sb_util.getParameterValue("ERROR_URL", "");
+        var _containerId = sb_util.getParameterValue("CONTAINER_ID", "");
+
+    	function init()
+    	{
+            if (_containerId != ""){
+                var targetUrl;
+                if(_error)
+                    targetUrl = _error;
+                else if(_url)
+                    targetUrl = _url;
+                if(targetUrl){
+                    parent.postMessage(JSON.stringify({ container_id:_containerId, url:targetUrl }), '*');
+                }
+                return;
+            }
+
+    		if(_error)
+    		{
+    			window.location.href = _error;
+    		}
+    		else if(_url)
+    		{
+    			window.event.returnValue = false;
+    			window.location.href = _url;
+    		}
+    	};
+
+		function OnImageLoad(evt)
+		{
+            var w = $("#div_loading").width();
+            var h = $("#div_loading").height();
+            if (w < h)
+            {
+                $("#loadingImg").width(w);
+            }
+            else
+            {
+                $("#loadingImg").height(h);
+            }
+			$("#loadingImg").css('visibility', 'visible');
+		};
+
+	 </script>
+
+
+</head>
+
+<body onselectstart="return false" oncontextmenu="return false" onload="init()" style="overflow:hidden;-ms-overflow-y:hidden;">
+	 <div class="item" id="div_loading">
+	 	<img id="loadingImg" class="svg_gif" style="visibility:hidden" onload="OnImageLoad(event);">
+	 </div>
+	 <p id="hint"></p>
+</body>
+ 
+</html>
+

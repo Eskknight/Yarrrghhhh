@@ -1,0 +1,115 @@
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+
+<head>
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+
+<script type="text/javascript" src="../js/util.js"></script>
+
+<script type="text/javascript" src="../js/urlparse_module.js"></script>
+
+<script type="text/javascript" src="../js/contact_us_module.js"></script>
+
+<script>
+
+loadJS();
+
+
+window.onload=function(){
+    // loadJS();
+    localizePage();
+    setSize();
+
+    // contactUsUrl();
+};
+
+function setSize(){
+    var height = sb_util.getWindowHeight();
+    document.body.style.height = height + "px";
+    $("#update_card_fail_pic").height(height*0.57);
+};
+
+
+
+
+function loadJS(){
+
+    var locale = urlParseModule.getURLParameter("locale") ? urlParseModule.getURLParameter("locale") : 'en-us';
+
+    // locale = locale.toLowerCase();
+
+    locale = sb_util.getLocaleFolder(locale);
+
+    sb_util.loadjscssfile("../lang/" + locale + "/lan_fail_update.js", "js", localizePage);
+
+};
+
+
+
+function localizePage(){
+
+    $("#factive_1").text(lan_fail_activate["factive_1"]);
+
+    $("#factive_2").text(lan_fail_activate["factive_2"]);
+
+    $("#suc_link").text(lan_fail_activate["suc_link"]);
+
+    $("#contactus").text(lan_fail_activate["contactus"]);
+
+};
+
+</script>
+
+
+
+<title>Update Card</title>
+
+</head>
+
+<body onselectstart="return false" oncontextmenu="return false">
+
+	<div id="update_card_fail_pic" class="suc_pic" style="background-image:url(../image/banner_membership_fail_img@2x.png);background-size: 154px;background-position: 50% 50%;">
+
+	</div>
+
+	<div id="suc_content">
+
+	<h4 id="factive_1">Update Failed</h4>
+
+	<h5 id="factive_2">There is something wrong with your payment information. Please check card details and try again.</h5>
+
+	</div>
+
+	<div id="link_wrap">
+
+		<a id="suc_link" href="sketchbook://banner/retry_creditcard">Try again
+
+		</a>
+
+		<br/>
+
+		<a id="contactus" class="mhide">Contact us for help
+
+		</a>
+
+	</div>
+
+
+
+</body>
+
+</html>

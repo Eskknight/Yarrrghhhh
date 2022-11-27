@@ -1,0 +1,125 @@
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+
+<head>
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+
+<script type="text/javascript" src="../js/urlparse_module.js"></script>
+
+<script type="text/javascript" src="../js/util.js"></script>
+
+<script>
+
+loadJS();
+
+window.onload=function(){ 
+
+    localizePage();
+};
+
+function loadJS(){
+
+    var locale = sb_util.getParameterValue("locale", 'en-us');
+
+    locale = sb_util.getLocaleFolder(locale);
+
+    sb_util.loadjscssfile("../lang/" + locale + "/lan_subscription.js", "js", "");
+};
+
+
+
+function localizePage(){
+
+    $("#about_subscription_title").text(lan_subscription["about_subscription_title"]);
+
+    $("#about_subscription_10").text(lan_subscription["about_subscription_10"]);
+    $("#about_subscription_11").text(lan_subscription["about_subscription_11"]);
+
+    $("#about_subscription_20").text(lan_subscription["about_subscription_20"]);
+    $("#about_subscription_21").text(lan_subscription["about_subscription_21"]);
+
+    $("#about_subscription_30").text(lan_subscription["about_subscription_30"]);
+    $("#about_subscription_31").text(lan_subscription["about_subscription_31"]);
+
+    $("#about_subscription_40").text(lan_subscription["about_subscription_40"]);
+    $("#about_subscription_41").text(lan_subscription["about_subscription_41"]);
+
+    $("#about_subscription_50").text(lan_subscription["about_subscription_50"]);
+    $("#about_subscription_51").text(lan_subscription["about_subscription_51"]);
+
+    $("#about_subscription_60").text(lan_subscription["about_subscription_60"]);
+    $("#about_subscription_61").text(lan_subscription["about_subscription_61"]);
+
+    $("#about_subscription_90").text(lan_subscription["about_subscription_90"]);
+    $("#about_subscription_91").text(lan_subscription["about_subscription_91"]);
+    $("#about_subscription_92").text(lan_subscription["about_subscription_92"]);
+
+};
+
+</script>
+
+
+
+<title>About Subscription</title>
+
+</head>
+
+<body onselectstart="return false" oncontextmenu="return false">
+
+    <div id="about_subscription_header">
+        <div><a id="backarrow" href="sketchbook://banner/page_back?backpage=mas_trial"></a></div>
+        <br/>
+
+        <div id="about_subscription_title">About Subscription</div>
+    </div>
+
+    <div id="about_subscription_content">
+
+        <div style="width:100%; margin:40px 0px;">
+
+        <h4 id="about_subscription_10">What do I get with a SketchBook subscription?</h4>
+        <h5 id="about_subscription_11">Access advanced tools in SketchBook. Get every update and new feature on all your devices. Create unlimited scenes in SketchBook Motion."</h5>
+
+        <h4 id="about_subscription_20">How do I access my subscription on other devices?</h4>
+        <h5 id="about_subscription_21">Log in using the same Autodesk username and password you used when purchasing your subscription.</h5>
+
+        <h4 id="about_subscription_30">When will my subscription be renewed?</h4>
+        <h5 id="about_subscription_31">Subscriptions are automatically renewed, unless auto-renew is turned off at least 24-hours before the end of the current subscription period.</h5>
+
+        <h4 id="about_subscription_40">When will I be charged?</h4>
+        <h5 id="about_subscription_41">Your account will be charged for renewal within 24-hours prior to the end of the current subscription period and will state the cost of the renewal.</h5>
+
+        <h4 id="about_subscription_50">How do I cancel my subscription?</h4>
+        <h5 id="about_subscription_51">Once you've made a purchase, manage your subscription, including auto-renewal, through your Account Settings.</h5>
+
+        <h4 id="about_subscription_60">Do I lose any of my work when I unsubscribe?</h4>
+        <h5 id="about_subscription_61">No. You will still have access to all your files and the basic free tools. However, please be aware that deleting the app will delete all your files.</h5>
+
+        <br/>
+        <h5>
+            <a id="about_subscription_90" href="sketchbook://banner/open-url?url=https://www.autodesk.com/company/legal-notices-trademarks/terms-of-service-autodesk360-web-services">A360 Terms of Service</a>
+            <span id="about_subscription_91">and</span>
+            <a id="about_subscription_92" href="sketchbook://banner/open-url?url=https://www.autodesk.com/company/legal-notices-trademarks/privacy-statement">Autodesk Privacy Statement</a>
+        </h5>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

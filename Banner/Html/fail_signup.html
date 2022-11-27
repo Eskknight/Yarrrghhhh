@@ -1,0 +1,121 @@
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+
+<head>
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+
+<script type="text/javascript" src="../js/util.js"></script>
+
+<script type="text/javascript" src="../js/urlparse_module.js"></script>
+
+<script type="text/javascript" src="../js/contact_us_module.js"></script>
+
+<script>
+
+loadJS();
+
+window.onload=function(){ 
+
+    // loadJS();
+
+    localizePage();
+
+    setSize();
+
+};
+
+
+
+function setSize(){
+
+    var height = sb_util.getWindowHeight();
+
+    document.body.style.height = height + "px";
+
+    $("#fail_pic").height(height*0.57);
+
+    contactUsUrl();
+
+};
+
+
+
+function loadJS(){
+
+    // var locale = urlParseModule.getURLParameter("locale") ? urlParseModule.getURLParameter("locale") : 'en-us';
+    var locale = sb_util.getParameterValue("locale", 'en-us');
+    // locale = locale.toLowerCase();
+
+    locale = sb_util.getLocaleFolder(locale);
+
+    sb_util.loadjscssfile("../lang/" + locale + "/lan_fail_signup.js", "js", localizePage);
+
+};
+
+
+
+function localizePage(){
+
+    $("#fsignup_1").text(lan_fail_signup["fsignup_1"]);
+
+    $("#fsignup_2").text(lan_fail_signup["fsignup_2"]);
+
+    $("#suc_link").text(lan_fail_signup["suc_link"]);
+
+    $("#contactus").text(lan_fail_signup["contactus"]);
+
+};
+
+</script>
+
+<title>Failsignup</title>
+
+</head>
+
+<body onselectstart="return false" oncontextmenu="return false">
+
+	<div id="fail_pic">
+
+	</div>
+
+	<div id="suc_content">
+
+	<h4 id="fsignup_1">Sign Up Failed.</h4>
+
+	<h5 id="fsignup_2">There might be some problem with the internet or your account.</h5>
+
+	</div>
+
+	<div id="link_wrap">
+<!--// not supported so far
+		<a id="suc_link" href="sketchbook://banner/tryagain">Try again
+
+		</a>
+
+		<br/>
+//-->
+		<a id="contactus">Contact us for help
+
+		</a>
+
+	</div>
+
+
+
+</body>
+
+</html>

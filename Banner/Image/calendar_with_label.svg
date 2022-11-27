@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="142px" height="142px" viewBox="0 0 142 142" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>calendar big with label thickeness copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#9F3B2E" stop-opacity="0.186197917" offset="0%"></stop>
+            <stop stop-color="#9F3C2E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="95.9913684%" y1="96.5725806%" x2="6.35553175%" y2="5.0812752%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.263332201" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="8.12628074%" y1="3.88609871%" x2="55.7097404%" y2="57.6920048%" id="linearGradient-3">
+            <stop stop-color="#C3A195" offset="0%"></stop>
+            <stop stop-color="#BA948E" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-4" x="9" y="1" width="124" height="124" rx="19"></rect>
+        <linearGradient x1="94.4071263%" y1="94.947389%" x2="6.99383033%" y2="7.55384292%" id="linearGradient-5">
+            <stop stop-color="#9F3B2E" stop-opacity="0.16259058" offset="0%"></stop>
+            <stop stop-color="#9F3C2E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="1.85926123%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#A2655A" offset="0%"></stop>
+            <stop stop-color="#3A3838" offset="67.172571%"></stop>
+            <stop stop-color="#D1D1D1" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="50%" x2="50%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#000000" offset="0%"></stop>
+            <stop stop-color="#E6E6E6" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="11.6511418%" y1="5.26029147%" x2="48.1210562%" y2="79.1559533%" id="linearGradient-8">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#E2DFDF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-9" x="19" y="30" width="104" height="79" rx="12"></rect>
+        <linearGradient x1="8.22378305%" y1="22.1019848%" x2="24.4459886%" y2="68.0294552%" id="linearGradient-10">
+            <stop stop-color="#F2E5BE" offset="0%"></stop>
+            <stop stop-color="#EBD5B7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="11.6511418%" y1="5.26029147%" x2="27.0554763%" y2="84.3187737%" id="linearGradient-11">
+            <stop stop-color="#FCF0CD" offset="0%"></stop>
+            <stop stop-color="#EBD5B7" offset="100%"></stop>
+        </linearGradient>
+        <path d="M31,11 L111,11 C117.627417,11 123,16.372583 123,23 L123,44 L19,44 L19,23 C19,16.372583 24.372583,11 31,11 Z" id="path-12"></path>
+        <linearGradient x1="50%" y1="100%" x2="18.9737956%" y2="11.1714681%" id="linearGradient-13">
+            <stop stop-color="#C1958C" offset="0%"></stop>
+            <stop stop-color="#422B27" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="11.6511418%" y1="5.26029147%" x2="87.0768229%" y2="94.3969727%" id="linearGradient-14">
+            <stop stop-color="#B09C80" offset="0%"></stop>
+            <stop stop-color="#FAEFE0" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-15" cx="6" cy="18" r="6"></circle>
+        <linearGradient x1="74.5442708%" y1="90.9667969%" x2="50%" y2="0%" id="linearGradient-16">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#805923" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-17" cx="6" cy="18" r="6"></circle>
+    </defs>
+    <g id="calendar-big-with-label-thickeness-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M20.9666667,11 L129.133334,11 L129.133334,11 C134.200828,16.7009316 137,24.0633116 137,31.6909013 L137,100.797263 C137,110.603969 135.978918,114.160118 134.06154,117.745303 C132.144162,121.330488 129.330488,124.144162 125.745303,126.06154 C122.160118,127.978918 118.603969,129 108.797263,129 L37.7913021,129 C34.8734057,129 32.5802973,128.803665 30.5013837,128.324527 C28.42247,127.845389 26.5829812,127.083447 24.7741654,125.952235 C22.9653495,124.821023 21.2050471,123.338381 19.1417828,121.275116 L19,121.133334 L20.9666667,11 Z" id="Shadow" fill="url(#linearGradient-1)" opacity="0.642889493"></path>
+        <rect id="Rectangle-3" fill="#5D5D5D" opacity="0.288609601" x="10" y="2" width="124" height="124" rx="20"></rect>
+        <g id="Rectangle-3">
+            <use fill="#B98981" fill-rule="evenodd" xlink:href="#path-4"></use>
+            <use fill="url(#linearGradient-2)" fill-rule="evenodd" xlink:href="#path-4"></use>
+            <rect stroke="url(#linearGradient-3)" stroke-width="2" x="10" y="2" width="122" height="122" rx="19"></rect>
+        </g>
+        <path d="M30,12 L115,12 L120,16 L126.212885,22.7776923 C128.227019,24.9749296 128.845697,25.7949076 129.433108,26.798101 C130.020518,27.8012944 130.412241,28.8083369 130.657112,29.9447727 C130.901982,31.0812085 131,32.1037149 131,35.0844176 L131,101.206976 C131,108.784885 130.210982,111.532818 128.729372,114.303188 C127.247762,117.073559 125.073559,119.247762 122.303188,120.729372 C119.532818,122.210982 116.784885,123 109.206976,123 L53.3117521,123 C48.6091082,123 45.2665475,122.756497 42.1816988,122.133695 C39.0968502,121.510893 36.3611706,120.508792 33.6039453,118.991596 C30.84672,117.474401 28.137766,115.501187 24.5478321,112.46355 L24,112 L24,106 L24,17.5439453 L30,12 Z" id="Shadow" fill="url(#linearGradient-5)" opacity="0.327955163"></path>
+        <rect id="Rectangle-2" fill="url(#linearGradient-6)" x="19" y="12" width="104" height="103" rx="12"></rect>
+        <rect id="Rectangle-2" fill="url(#linearGradient-7)" x="19" y="30" width="104" height="82" rx="12"></rect>
+        <g id="Rectangle-2">
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
+            <rect stroke="url(#linearGradient-8)" stroke-width="1" x="19.5" y="30.5" width="103" height="78" rx="12"></rect>
+        </g>
+        <g id="Rectangle">
+            <use fill="#EBD5B7" fill-rule="evenodd" xlink:href="#path-12"></use>
+            <use fill="url(#linearGradient-10)" fill-rule="evenodd" xlink:href="#path-12"></use>
+            <path stroke="url(#linearGradient-11)" stroke-width="1" d="M19.5,43.5 L122.5,43.5 L122.5,23 C122.5,16.6487254 117.351275,11.5 111,11.5 L31,11.5 C24.6487254,11.5 19.5,16.6487254 19.5,23 L19.5,43.5 Z"></path>
+        </g>
+        <g id="bracket" transform="translate(27.000000, 3.000000)">
+            <g id="hole">
+                <use fill="url(#linearGradient-13)" fill-rule="evenodd" xlink:href="#path-15"></use>
+                <circle stroke="url(#linearGradient-14)" stroke-width="1" cx="6" cy="18" r="5.5"></circle>
+            </g>
+            <path d="M5.9981216,22.9999996 C5.9987477,22.9999999 5.99937383,23 6,23 C6.00062617,23 6.0012523,22.9999999 6.0018784,22.9999996 C6.0012523,22.9999999 6.00062616,23 6,23 C5.99937384,23 5.9987477,22.9999999 5.9981216,22.9999997 Z M5.96887006,22.9999051 C3.221772,22.9831567 1,20.7510397 1,18 C1,15.2385763 3.23857625,13 6,13 C8.76142375,13 11,15.2385763 11,18 C11,20.7510397 8.778228,22.9831567 6.03112994,22.9999051 C8.22593592,22.9831543 10,21.1987546 10,19 C10,16.790861 8.209139,15 6,15 C3.790861,15 2,16.790861 2,19 C2,21.1987546 3.77406408,22.9831543 5.96887457,22.9998814 Z" id="Combined-Shape" fill="url(#linearGradient-16)" fill-rule="evenodd"></path>
+            <rect id="Rectangle-4" fill="#B4B4B4" fill-rule="evenodd" x="3" y="0" width="6" height="21" rx="3"></rect>
+            <rect id="Rectangle-5" fill="#FFFFFF" fill-rule="evenodd" x="4" y="2" width="1" height="17" rx="0.5"></rect>
+            <circle id="Oval" fill="#FFFFFF" fill-rule="evenodd" cx="5.5" cy="2.5" r="1.5"></circle>
+        </g>
+        <g id="bracket" transform="translate(103.000000, 3.000000)">
+            <g id="hole">
+                <use fill="url(#linearGradient-13)" fill-rule="evenodd" xlink:href="#path-17"></use>
+                <circle stroke="url(#linearGradient-14)" stroke-width="1" cx="6" cy="18" r="5.5"></circle>
+            </g>
+            <path d="M5.9981216,22.9999996 C5.9987477,22.9999999 5.99937383,23 6,23 C6.00062617,23 6.0012523,22.9999999 6.0018784,22.9999996 C6.0012523,22.9999999 6.00062616,23 6,23 C5.99937384,23 5.9987477,22.9999999 5.9981216,22.9999997 Z M5.96887006,22.9999051 C3.221772,22.9831567 1,20.7510397 1,18 C1,15.2385763 3.23857625,13 6,13 C8.76142375,13 11,15.2385763 11,18 C11,20.7510397 8.778228,22.9831567 6.03112994,22.9999051 C8.22593592,22.9831543 10,21.1987546 10,19 C10,16.790861 8.209139,15 6,15 C3.790861,15 2,16.790861 2,19 C2,21.1987546 3.77406408,22.9831543 5.96887457,22.9998814 Z" id="Combined-Shape" fill="url(#linearGradient-16)" fill-rule="evenodd"></path>
+            <rect id="Rectangle-4" fill="#B4B4B4" fill-rule="evenodd" x="3" y="0" width="6" height="21" rx="3"></rect>
+            <rect id="Rectangle-5" fill="#FFFFFF" fill-rule="evenodd" x="4" y="2" width="1" height="17" rx="0.5"></rect>
+            <circle id="Oval" fill="#FFFFFF" fill-rule="evenodd" cx="5.5" cy="2.5" r="1.5"></circle>
+        </g>
+    </g>
+</svg>

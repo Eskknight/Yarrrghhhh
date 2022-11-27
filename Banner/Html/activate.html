@@ -1,0 +1,81 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/urlparse_module.js"></script>
+<script type="text/javascript" src="../js/svg_support.js"></script>
+
+<script>
+loadJS();
+window.onload=function(){ 
+    localizePage();
+    setSize();
+    adaptPage();
+};
+
+function setSize(){
+    var height = sb_util.getWindowHeight();
+    document.body.style.height = height + "px";
+    $("#activate_pic").height(height*0.57);
+};
+
+function loadJS(){
+    var locale = sb_util.getParameterValue("locale", 'en-us');
+    // var locale = urlParseModule.getURLParameter("locale") ? urlParseModule.getURLParameter("locale") : 'en-us';
+    locale = sb_util.getLocaleFolder(locale);
+    sb_util.loadjscssfile("../lang/" + locale + "/lan_activate.js", "js", localizePage);
+};
+
+
+function localizePage(){
+    $("#activate_1").text(lan_activate["activate_1"]);
+    $("#activate_2").text(lan_activate["activate_2"]);
+    $("#l_activate").text(lan_activate["l_activate"]);
+};
+
+function adaptPage(){
+    var loading = sb_util.getParameterValue("loading", "");
+	// var loading = urlParseModule.getURLParameter('loading');
+	if(loading){
+		if($('#div_loading').hasClass('mhide')){
+			$("#div_loading").removeClass('mhide');
+		}
+    }else{
+    	if($('#l_activate').hasClass('mhide')){
+			$("#l_activate").removeClass('mhide');
+		}
+    }
+
+};
+
+function OnImageLoad(evt)
+{
+    $("#loadingImg").height($("#link_wrap").height()*0.6);
+    $("#loadingImg").css('visibility', 'visible');
+};
+
+</script>
+<title>Activate</title>
+</head>
+<body onselectstart="return false" oncontextmenu="return false">
+    <div id="activate_pic" class="suc_pic">
+    </div>
+    <div id="a_content">
+    <h4 id="activate_1">Almost There!</h4>
+    <h5 id="activate_2">Now you have completed your purchase, it might take a few seconds more to activate.</h5>
+    </div>
+    <div id="link_wrap">
+    	<div id="div_loading" class="mhide">
+            <img id="loadingImg" class="svg_gif" onload='OnImageLoad(event);'>
+        </div>
+        <a id="l_activate" class="mhide" href="sketchbook://banner/buy-complete">Activate </a>
+    </div>
+</body>
+</html>

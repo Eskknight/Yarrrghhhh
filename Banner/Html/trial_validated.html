@@ -1,0 +1,125 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> 
+<html class=""> 
+<!--<![endif]-->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/urlparse_module.js"></script>
+<script type="text/javascript" src="../js/svg_support.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+
+<script>
+
+var SKETCHBOOK_TRIAL_STATUS_IN_TRIAL = 0;
+var SKETCHBOOK_TRIAL_STATUS_TRIED_ON_THIS_MACHINE = 1;
+var SKETCHBOOK_TRIAL_STATUS_EXPIRED = 2;
+var SKETCHBOOK_TRIAL_STATUS_CAN_TRY = 3;
+
+var LOCALE = sb_util.getParameterValue("locale", "en-us");
+
+var TRIAL = sb_util.getParameterValue("trial", SKETCHBOOK_TRIAL_STATUS_CAN_TRY.toString());
+var TRIAL_DAYS = sb_util.getParameterValue("trial_days", "15");
+var TRIAL_TIME_LEFT = sb_util.getParameterValue("trial_time_left", "0");
+
+loadJS();
+
+window.onload=function(){
+    localizePage();
+
+    updateStatus();
+
+    hideBody(false);
+};
+
+function loadJS(){
+    var locale = LOCALE;
+    locale = sb_util.getLocaleFolder(locale);
+    sb_util.loadjscssfile("../lang/" + locale + "/lan_index.js", "js", localizePage);
+};
+
+function localizePage(){
+    $("#trial_activated_header").html(lan_index["trial_activated_header"]);
+    $("#trial_activated_failed_header").html(lan_index["trial_activated_failed_header"]);
+    // $("#trial_activated_txt").html(lan_index["trial_activated_txt"]);
+    $("#trial_validated_success_txt_1").html(lan_index["trial_validated_success_txt_1"]);
+    $("#trial_validated_success_txt_2").html(lan_index["trial_validated_success_txt_2"]);
+    $("#trial_not_activated_same_machine_txt").html(lan_index["trial_not_activated_same_machine_txt"]);
+    $("#trial_not_activated_expired_txt").html(lan_index["trial_not_activated_expired_txt"]);
+
+    $("#trial_not_activated_try_again_txt").html(lan_index["trial_not_activated_try_again_txt"]);
+    $("#ok_btn").html(lan_index["ok_btn"]);
+};
+
+function updateStatus(){
+    var trialStatus = TRIAL;
+    if (trialStatus){
+        trialStatus = parseInt(trialStatus);
+    }
+
+    switch(trialStatus){
+        case SKETCHBOOK_TRIAL_STATUS_EXPIRED:
+            $("#trial_activated_failed_header").removeClass("mhide");
+            $("#trial_not_activated_expired_txt").removeClass("mhide");
+            break;
+        case SKETCHBOOK_TRIAL_STATUS_IN_TRIAL: // success
+            var timeleft = parseInt(TRIAL_TIME_LEFT);
+            var trialDaysLeft = Math.ceil(timeleft / 86400.0);
+            if (trialDaysLeft > 1) {
+                $("#trial_days").html(trialDaysLeft.toString());
+                $("#trial_validated_success_txt_2").removeClass("mhide");
+            }else{
+                // $("#trial_day").html(trialDaysLeft.toString());
+                // $("#campaign_validated_success_singular_txt").removeClass("mhide");
+            }
+            $("#trial_activated").addClass("trial_activate_success");
+            $("#trial_activated_header").removeClass("mhide");
+            $("#trial_activated_txt").removeClass("mhide");
+            break;
+        case SKETCHBOOK_TRIAL_STATUS_CAN_TRY:  // fail, try again
+            $("#trial_activated_failed_header").removeClass("mhide");
+            $("#trial_not_activated_try_again_txt").removeClass("mhide");
+            break;
+        case SKETCHBOOK_TRIAL_STATUS_TRIED_ON_THIS_MACHINE: // fail, no need to try again
+            $("#trial_activated_failed_header").removeClass("mhide");
+            $("#trial_not_activated_same_machine_txt").removeClass("mhide");
+            break;
+        default:
+            $("#trial_activated_failed_header").removeClass("mhide");
+            $("#trial_not_activated_try_again_txt").removeClass("mhide");
+            break;
+    }
+}
+
+function hideBody(hide){
+    if(hide){
+        $("body").addClass("mhidden");
+    }else if($("body").hasClass("mhidden")){
+        $("body").removeClass("mhidden");
+    }
+}
+</script>
+
+<title>Trial</title>
+</head>
+<body class="mhidden" style="overflow:hidden;-ms-overflow-y:hidden;"> <!--onselectstart="return false" oncontextmenu="return false"-->
+  <div id="trial_activated">
+    <div id="trial_activated_content">
+      <h1 id="trial_activated_header" class="font_lighter mhide">TEST Trial Activated!</h1>
+      <h1 id="trial_activated_failed_header" class="font_lighter mhide">TEST Trial Not Activated!</h1>
+      <p id="trial_activated_txt" class="font_lighter mhide"><span id="trial_validated_success_txt_1">TEST Now, you can enjoy PRO Membership free for</span> <span id="trial_days">30</span> <span id="trial_validated_success_txt_2">days.</span></p>
+      <p id="trial_not_activated_same_machine_txt" class="font_lighter mhide">TEST This machine has already been tried.</p>
+      <p id="trial_not_activated_expired_txt" class="font_lighter mhide">TEST Your account's trial is expired.</p>
+      <p id="trial_not_activated_try_again_txt" class="font_lighter mhide">TEST Oops… Please try again.</p>
+      <a id="ok_btn" href="sketchbook://banner/page_back?backpage=home">TEST OK</a>
+    </div>
+  </div>
+</body>
+</html>

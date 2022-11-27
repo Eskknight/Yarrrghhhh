@@ -1,0 +1,482 @@
+html {
+    -ms-touch-action: none;
+    touch-action: none;
+    background-color: #000000;
+}
+
+body {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    font-family: 'Artifakt Legend Web', Helvetica Neue, Roboto-Light, Segoe UI Light, Arial, Verdana;
+    font-size: 16px;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+a {
+    pointer-events: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+body:hover {
+    cursor: default;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.layout {
+    opacity: 0;
+    -webkit-transition: opacity 500ms ease; /* compat for Android/iOS/Mac */
+    transition: opacity 500ms ease;
+}
+
+.locked-out .layout {
+    opacity: 1;
+}
+
+.trial-active .layout {
+    opacity: 1;
+}
+
+.background {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: opacity 5000ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* compat for Android/iOS/Mac */
+    transition: opacity 5000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+.locked-out .background {
+    opacity: 1;
+}
+
+.trial-active .background {
+    opacity: 1;
+}
+
+.autodesk-icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 11;
+    margin-left: -25px;
+    margin-top: -75px;
+    background-image: url("../image/autodesk-mini-logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    opacity: 0;
+    -webkit-transition: opacity 8000ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* compat for Android/iOS/Mac */
+    transition: opacity 8000ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+.locked-out .autodesk-icon {
+    opacity: 1;
+}
+
+#content {
+    position: absolute;
+    z-index: 100;
+}
+
+.content-column {
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#action-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modern_button {
+    text-decoration: none;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    padding: 7px 5px;
+    text-align: center;
+    white-space: nowrap;
+    margin: 26px auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.modern_button:hover {
+    opacity: 0.88;
+}
+
+#create_account_button {
+    background: rgba(255,255,255, 0.1349);
+    border: 2px solid white;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+#login_button {
+    background: white;
+    border: 2px solid white;
+    color: #3D3D3D;
+    margin-top: 24px;
+}
+
+#announcement_header {
+    position: fixed;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#announcement_body {
+    position: fixed;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+#announcement_footer {
+    position: fixed;
+    color: white;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+}
+
+
+#announcement_header {
+    font-weight: 300;
+    font-style: normal;
+    font-size: 22px;
+}
+
+#announcement_header strong {
+    font-weight: normal;
+    font-style: normal;
+}
+
+#announcement_middle {
+    color: white;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 36px;
+    margin-bottom: -7px;
+}
+
+#no_really {
+    color: rgb(232, 112, 58);
+    text-align: center;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+    opacity: 0;
+    -webkit-transition: opacity 3000ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 2s; /* compat for Android/iOS/Mac */
+    transition: opacity 3000ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 2s, color 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 4s;
+}
+
+.locked-out #no_really, .trial-active #no_really {
+    opacity: 1;
+}
+
+#announcement_footer {
+    color: white;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 13px;
+}
+
+
+
+
+/* trial card */
+
+.trial-slide {
+    -webkit-transition: transform 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 500ms, opacity 100ms ease-out 0s;
+    transition: transform 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 500ms, opacity 100ms ease-out 0s;
+    -ms-transform-origin: top center;
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+}
+
+.trial-slide-nodelay {
+    -webkit-transition: transform 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 0ms, opacity 100ms ease-out 0s;
+    transition: transform 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 0ms, opacity 100ms ease-out 0s;
+    -ms-transform-origin: top center;
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+}
+
+#trial-card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-image: linear-gradient(137deg, #EA813C 0%, #E03D33 64%, #DE3932 100%); */
+    background-image: url("../image/trial-background.svg");
+    background-position:  top left;
+    background-size: cover;
+    background-color: rgb(229, 97, 56);
+
+    z-index: 200;
+    opacity: 0;
+    -ms-transform: translate(0, 100%) scale(1, .35);
+    -webkit-transform: translate(0, 100%) scale(1, .35);
+    transform: translate(0, 100%) scale(1, .35);
+}
+
+.trial-active #trial-card {
+    opacity: 1;
+    -ms-transform: translate(0, 65%) scale(1, .35);
+    -webkit-transform: translate(0, 65%) scale(1, .35);
+    transform: translate(0, 65%) scale(1, .35);
+}
+
+.trial-card-expanded #trial-card {
+    opacity: 1;
+    -ms-transform: translate(0, 0) scale(1, 1);
+    -webkit-transform: translate(0, 0) scale(1, 1);
+    transform: translate(0, 0) scale(1, 1);
+}
+
+
+#pencil-card {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 270;
+    background: none;
+    -ms-transform: translate(0, 35%) scale(1);
+    -webkit-transform: translate(0, 35%) scale(1);
+    transform: translate(0, 35%) scale(1);
+}
+
+.trial-active #pencil-card {
+    opacity: 1;
+    -ms-transform: translate(0, 0%);
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%);
+}
+
+#pencil-icon {
+    pointer-events: initial;
+    position: absolute;
+    width: 180px;
+    height: 78px;
+    margin-left: -90px;
+    margin-top: -78px;
+    background-image: url("../image/sketchbook-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    opacity: 0;
+}
+
+
+.trial-active #pencil-icon {
+    opacity: 1;
+}
+
+
+
+#trial-mini-card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    background: none;
+    pointer-events: none;
+    -ms-transform: translate(0, 100%);
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+}
+
+
+.trial-active #trial-mini-card {
+    opacity: 1;
+    -ms-transform: translate(0, 65%);
+    -webkit-transform: translate(0, 65%);
+    transform: translate(0, 65%);
+}
+
+.trial-card-expanded #trial-mini-card {
+    opacity: 0;
+    -ms-transform: translate(0, 0%);
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%);
+}
+
+#start-now-copy {
+    position: relative;
+    z-index: 225;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+}
+
+.trial-active #start-now-copy {
+    opacity: 1;
+    color: white;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.trial-card-expanded #start-now-copy {
+    opacity: 0;
+}
+
+
+#start_now_link {
+    display: block;
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#start_now_link:hover {
+    opacity: 0.82
+}
+
+#trial-maxi-card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 250;
+    background: none;
+    -webkit-transition: transform 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 500ms, opacity 100ms ease-out 0ms;
+    transition: transform 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000) 0ms, opacity 100ms ease-out 0ms;
+    -ms-transform-origin: top center;
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    opacity: 0;
+    -ms-transform: translate(0, 65%); 
+    -webkit-transform: translate(0, 65%); 
+    transform: translate(0, 65%); 
+}
+
+.trial-active.trial-card-expanded #trial-maxi-card {
+    opacity: 1;
+    -ms-transform: translate(0, 0%);
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%);
+}
+
+
+
+#enjoy-your-trial {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 22px;
+    width: 384px;
+}
+
+#enjoy-your-trial strong {
+    font-weight: normal;
+    font-style: normal;
+}
+
+#calendar-day {
+    position: absolute;
+    background-image: url("../image/calendar_with_label.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    color: #3F4D5E;
+    text-align: center;
+    width: 140px;
+    height: 140px;
+}
+
+#calendar_icon_header {
+    position: absolute;
+    top: 26px;
+    width: 100%;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.number {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 40px;
+}
+
+#or-create-account {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 13px;
+}
+
+#or-create-account .create_account_link {
+    font-size: 16px;
+}
+
+@media (min-height: 850px) {
+
+    #announcement_footer,
+    #start-now-copy,
+    #or-create-account {
+        font-size: 16px;
+    } 
+
+    a {
+        font-size: 20px;
+    }
+    #announcement_header {
+        font-size: 36px;
+    }
+    
+    #enjoy-your-trial {
+        font-size: 32px;
+    }
+
+    #announcement_middle {
+        font-size: 48px;
+        margin-bottom: -12px;
+    }
+
+    #no_really {
+        font-size: 32px;        
+    }
+
+}
+

@@ -1,0 +1,71 @@
+QGroupBox{
+    font-size: 12px;
+}
+
+QLabel{
+    font-size: 12px;
+    min-height: 16px;
+}
+
+QCheckBox{
+    font-size: 12px;
+    min-height: 16px;
+}
+
+QRadioButton{
+    font-size: 12px;
+    min-height: 16px;
+}
+
+QCheckBox::indicator, QRadioButton::indicator{
+	width:12px;
+	height:12px;
+}
+
+TpQPreferencesTabBar{
+	font-size: 12px;
+}
+
+QLineEdit{
+	font-size: 12px;
+}
+
+QComboBox{
+	font-size: 12px;
+}
+
+TpQPreferencesTabBar::tab{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top:2px;
+	padding-bottom:1px;
+	border:1px solid #d9d9d9;
+	border-bottom-color: transparent;
+	margin-top: 2px;
+	margin-bottom:1px;
+	margin-right: 0px;
+	margin-left: -1px;
+}
+
+TpQPreferencesTabBar::tab:first {
+    margin-left: 0;
+}
+
+TpQPreferencesTabBar::tab:last {
+    margin-right: 0;
+}
+
+TpQPreferencesTabBar::tab:only-one {
+    margin: 0; 
+}
+
+TpQPreferencesTabBar::tab:hover{
+	background-color:#d8eaf9;
+}
+
+TpQPreferencesTabBar::tab:selected{
+	background-color:white;
+	border-bottom-color: white;
+	margin-top:0px;
+	margin-bottom:0px;
+}

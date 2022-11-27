@@ -1,0 +1,111 @@
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+
+<head>
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="../css/banner.css">
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+
+<script type="text/javascript" src="../js/urlparse_module.js"></script>
+
+<script type="text/javascript" src="../js/util.js"></script>
+
+<script>
+
+loadJS();
+
+window.onload=function(){ 
+
+    // loadJS();
+
+    localizePage();
+
+    setSize();
+
+};
+
+
+
+function setSize(){
+
+    var height = sb_util.getWindowHeight();
+
+    document.body.style.height = height + "px";
+
+    $("#suc_pic").height(height*0.57);
+
+};
+
+
+
+function loadJS(){
+
+    // var locale = urlParseModule.getURLParameter("locale") ? urlParseModule.getURLParameter("locale") : 'en-us';
+    var locale = sb_util.getParameterValue("locale", 'en-us');
+    // locale = locale.toLowerCase();
+
+    locale = sb_util.getLocaleFolder(locale);
+
+    sb_util.loadjscssfile("../lang/" + locale + "/lan_suc_purchase.js", "js", localizePage);
+
+};
+
+
+
+function localizePage(){
+
+    $("#sucpurchase_1").text(lan_suc_purchase["sucpurchase_1"]);
+
+    $("#sucpurchase_2").text(lan_suc_purchase["sucpurchase_2"]);
+
+};
+
+</script>
+
+
+
+<title>SucPurchase</title>
+
+</head>
+
+<body onselectstart="return false" oncontextmenu="return false">
+
+	<div class="suc_pic" id="suc_purchase_pic">
+
+	</div>
+
+	<div id="suc_content">
+
+	<h4 id="sucpurchase_1">Purchase Successful!</h4>
+
+	<h5 id="sucpurchase_2">You've unlocked the FULL SketchBook toolset as a PRO member.</h5>
+
+	</div>
+
+	<div id="link_wrap">
+
+		
+
+	</div>
+
+
+
+
+
+
+
+</body>
+
+</html>

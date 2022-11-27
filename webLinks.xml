@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<userPreferences version="1.1">
+  <string name="alias"    value="http://www.autodesk.com/sketchbookpro"/>
+  <string name="home"     value="http://www.autodesk.com/sketchbookpro"/>
+  <string name="support"  value="http://www.autodesk.com/sketchbookpro"/>
+  <string name="buy"      value="http://usa.autodesk.com/adsk/servlet/index?siteID=123112&id=11069329&linkID=6761729"/>
+  <string name="update"   value="http://www.autodesk.com/sketchbookpro"/>
+  <string name="register" value="http://www.autodesk.com/sketchbookpro"/>
+  <string name="whybuy"   value="http://www.autodesk.com/sketchbookpro"/>
+  <string name="beta"     value="http://www.autodesk.com/sketchbookpro"/>
+  <string name="bug"      value="http://www.autodesk.com/sketchbookpro"/>
+  <string name="design"   value="http://aliasdesign.autodesk.com/"/>
+</userPreferences>
+
